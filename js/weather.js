@@ -9,7 +9,7 @@ if (navigator.geolocation) {
 }
 
 $(document).ready(function () {
-    setInterval(function() {loadWeather(x);}, 10000);
+    setInterval(function() {loadWeather(x);}, 1000);
 });
 
 function loadWeather(location, woeid) {
