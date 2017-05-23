@@ -9,7 +9,7 @@ if (navigator.geolocation) {
 }
 
 $(document).ready(function () {
-    setInterval(function() {loadWeather(x);}, 10000);
+    setInterval(function() {loadWeather(x);}, 1000);
 });
 
 function loadWeather(location, woeid) {
@@ -18,7 +18,7 @@ function loadWeather(location, woeid) {
         woeid: woeid,
         unit: 'c',
         success: function (weather) {
-            city = weather.city;
+            city = weather.city + ', ' + weather.region;
             temp = weather.temp + '&deg;';
             wcode = '<img class="weathericon" src="images/weathericons/' + weather.code + '.svg">';
             wind = '<p>' + weather.wind.speed + '</p><p>' + weather.units.speed + '</p>';
