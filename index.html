@@ -1,29 +1,76 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
   <title>One-Stop Weather</title>
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700,inherit,400" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="body page-index clearfix">
-  <div class="container clearfix">
-    <p class="location"></p>
-    <p class="temperature"></p>
-    <div class="climate_bg"></div>
-    <div class="info_bg">
-      <img class="dropicon" src="images/Droplet.svg">
-      <p class="humidity"></p>
 
-      <img class="windicon" src="images/Wind.svg">
-      <div class="windspeed"></div>
+<body>
+  <!-- header -->
+  <div id="header" class="container-fluid">
+    <h1>One-Stop Weather</h1>
+  </div>
+  <div class="divider"></div>
+
+  <!-- main weather content -->
+  <div id="main" class="container-fluid">
+    <div class="row">
+
+      <!-- current weather content -->
+      <div class="col-5">
+
+        <div class="row">
+
+          <div class="col-7 text-center padding-0 current-weather-left">
+            <p class="temperature"></p>
+            <p class="location"></p>
+          </div>
+
+          <div class="col-5 padding-0 current-weather-right">
+            <div class="climate_bg text-center"></div>
+            <div class="row info_bg">
+              <div class="col-4 text-center">
+                <img class="dropicon" src="images/Droplet.svg">
+              </div>
+              <div class="col-2 text-center">
+                <p class="humidity"></p>
+              </div>
+              <div class="col-4 text-center">
+                <img class="windicon" src="images/Wind.svg">
+              </div>
+              <div class="col-2 text-center">
+                <div class="windspeed"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- enf of current weather content -->
+
+      <!-- weather forecast -->
+      <div class="col-7">
+      </div>
+      <!-- end of weather forecast -->
+
     </div>
   </div>
 
+
+  <!-- Importing jquery, simple weather, and customized stylesheet -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
   <script src="js/weather.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
